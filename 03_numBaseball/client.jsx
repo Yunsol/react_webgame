@@ -4,6 +4,8 @@ import ReactDom from 'react-dom';
 
 import NumberBaseball from './NumberBaseball';
 
+import Test from './renderTest';
+
 // const Hot = hot(NumberBaseball);
 
 ReactDom.render(<NumberBaseball/>, document.querySelector('#root'))

@@ -1,21 +1,22 @@
-import React, {Component} from 'react';
+import React, {PureComponent, memo} from 'react';
 
 // props를 받는곳이지만 보통 구조분해해서 쓴다
-const Try = ({tryInfo}) => {
+const Try = memo(({tryInfo}) => {
     return (
         <li>
             <div>{tryInfo.try}</div>
             <div>{tryInfo.result}</div>
         </li>
     );
-}
+});
 
-// class Try extends Component {
+// class Try extends PureComponent {
 //     render(){
+//         const {tryInfo} = this.props;
 //         return (
 //             <li>
-//                 <div>{this.props.tryInfo.try}</div>
-//                 <div>{this.props.tryInfo.result}</div>
+//                 <div>{tryInfo.try}</div>
+//                 <div>{tryInfo.result}</div>
 //             </li>
 //         );
 //     }
