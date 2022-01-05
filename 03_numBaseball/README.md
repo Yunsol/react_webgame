@@ -19,6 +19,8 @@ state나 props가 바뀔때 render 다시 호출로 알고있지만 setState만 
 shouldComponentUpdate에 다음값과 현재값이 다르면 렌더링을 다시 하도록 조작가능 (return true일때 다시 렌더링됨)  
 * 참고(리액트 생명주기)  
 componentDidMount(Mounting)->shouldComponentUpdate(New props, setState)->componentDidUpdate(Updating - New props, setState, forceUpdate)->componentWillUnmount(Unmounting)  
+** Hook 
+useState -> render -> userEffect. 
 ※ 리액트 17부터는 componentWillMount, componentWillUpdate, componentWillReceiveProps 라이프 사이클이 deprecated되어서 사용 지양  
 
 
