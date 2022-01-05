@@ -17,6 +17,9 @@ React Developer Tools 필수!!
 붉게 하이라이팅 될수록 많이 렌더링 된다는 뜻  
 state나 props가 바뀔때 render 다시 호출로 알고있지만 setState만 호출하면 렌더링이 다시 일어남  
 shouldComponentUpdate에 다음값과 현재값이 다르면 렌더링을 다시 하도록 조작가능 (return true일때 다시 렌더링됨)  
+* 참고(리액트 생명주기)  
+componentDidMount(Mounting)->shouldComponentUpdate(New props, setState)->componentDidUpdate(Updating - New props, setState, forceUpdate)->componentWillUnmount(Unmounting)  
+※ 리액트 17부터는 componentWillMount, componentWillUpdate, componentWillReceiveProps 라이프 사이클이 deprecated되어서 사용 지양  
 
 
 # PureComponent
