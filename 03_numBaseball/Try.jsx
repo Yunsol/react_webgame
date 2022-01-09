@@ -1,7 +1,7 @@
-import React, {PureComponent, memo} from 'react';
+import React, { PureComponent, memo } from "react";
 
 // props를 받는곳이지만 보통 구조분해해서 쓴다
-const Try = memo(({tryInfo}) => {
+const Try = memo(({ tryInfo }) => {
     return (
         <li>
             <div>{tryInfo.try}</div>

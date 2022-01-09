@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const RefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 module.exports = {
-    name: 'lotto-setting',
+    name: 'tictactoe-setting',
     mode: 'development', // 실서비스: production
     devtool: 'eval',
     resolve: {

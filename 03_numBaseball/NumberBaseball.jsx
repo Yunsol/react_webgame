@@ -71,6 +71,8 @@ const NumberBaseball = () => {
                 {tries.map((v, i) => {
                     return (<Try key ={`${i + 1}차 시도:`} tryInfo={v}/>);
                 })}
+
+                
             </ul>
         </>
     );
