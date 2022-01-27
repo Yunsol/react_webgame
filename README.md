@@ -13,7 +13,7 @@ MS에서 만든 언어로 VSCODE와 짝짝꿍이 잘 됨
 에러 메시지는 에디터에만 표시되며 코드에는 영향을 주지 않음  
 에러무시하는 법  
 @ts-ignore - 해당 줄  
-~~~
+~~~typescript
 interface User {
     age: number;
      name: string;
@@ -26,7 +26,7 @@ let person: User = {
 ~~~
 
 @ts-nocheck - 전체  
-~~~
+~~~typescript
 //@ts-nocheck
 interface User {
     age: number;
@@ -41,7 +41,7 @@ let person: User = {
 
 ## 기본 타입
 ### 변수에 타입 설정
-~~~
+~~~typescript
 let str: string = 'hi';
 let num: number = 100;
 
@@ -56,7 +56,7 @@ let obj2: { name: string, age: number} = {
 ~~~
 
 ### 함수에 타입 설정
-~~~
+~~~typescript
 function add(a: number, b: number): number {
   return a+b;
 }
@@ -68,7 +68,7 @@ function log(a: string, b?: string, c?: string) {
 
 ### Tuple
 배열의 타입 순서와 배열 길이를 지정할 수 있는 타입
-~~~
+~~~typescript
 let arr: [string, number] = ['aa', 100];
 ~~~
 
@@ -80,7 +80,7 @@ Number 또는 String 값 집합에 고정된 이름을 부여할 수 있는 타�
  - object 는 코드내에서 새로운 속성을 자유롭게 추가할 수 있지만, enum 은 선언할때 이후에 변경할 수 없습니다.
  - object 의 속성값은 JS가 허용하는 모든 타입이 올 수 있지만, enum 의 속성값으로는 문자열 혹은 숫자만 허용됩니다.  
 
-~~~
+~~~typescript
 enum LanguageCode {
   korean = 'ko',
   english = 'en',
@@ -94,7 +94,7 @@ const code: LanguageCode = LanguageCode.korean
 ### Any
 모든 데이터 타입을 허용합니다.  
 컴파일 중 타입검사를 하지 않으므로 기존의 Javascript 와 같이 작업하기에 용이
-~~~
+~~~typescript
 let notSure: any = 4;
 notSure = "maybe a string instead";
 notSure = false;
@@ -103,7 +103,7 @@ notSure = false;
 ### Void
 변수에는 undefined와 null만 할당하고 함수에는 리턴 값을 설정할 수 없는 타입입니다.  
 이 함수는 아무것도 반환하지 않아라는 의미
-~~~
+~~~typescript
 const greetMaker = (phrase: string): void => {
 	console.log(phrase);
 };
@@ -111,7 +111,7 @@ const greetMaker = (phrase: string): void => {
 
 ### Never
 항상 오류를 출력하거나 리턴 값을 절대로 내보내지 않음을 의미
-~~~
+~~~typescript
 function invalid(message:string): never {
   throw new Error(message);
 }
@@ -119,14 +119,14 @@ function invalid(message:string): never {
 
 ## Interface 
 인터페이스는 타입을 정의한 규칙을 의미  
-~~~
+~~~typescript
 interface User {
  age: number;
  name: string;
 }
 ~~~
 ### 변수와 함수에 활용한 인터페이스
-~~~
+~~~typescript
 interface User {
  age: number;
  name: string;
@@ -143,7 +143,7 @@ function getUser(user: User) {
 ~~~
 
 ### 인덱싱
-~~~
+~~~typescript
 interface StringArray {
  [index: number]: string;
 }
@@ -153,7 +153,7 @@ arr2[0] = 10 //Error;
 ~~~
 
 ### 딕셔너리 패턴
-~~~
+~~~typescript
 interface StringRegexDictionary {
  [key: string]: RegExp
 }
@@ -173,7 +173,7 @@ let obj2: StringRegexDictionary = {
 ~~~
 
 ### 인터페이스 확장
-~~~
+~~~typescript
 interface Person{
  name: string;
  age: number;
