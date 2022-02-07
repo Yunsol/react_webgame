@@ -80,11 +80,14 @@ function log(a: string, b?: string, c?: string) {
 }
 ~~~
 
+
 ### Tuple
 배열의 타입 순서와 배열 길이를 지정할 수 있는 타입
 ~~~typescript
 let arr: [string, number] = ['aa', 100];
 ~~~
+
+#### Tuple과 Array 차이
 
 ### Enum
 Number 또는 String 값 집합에 고정된 이름을 부여할 수 있는 타입입니다. 값의 종류가 일정한 범위로 정해져 있는 경우에 유용합니다. 기본적으로 0부터 시작하며 값은 1씩 증가합니다.  
