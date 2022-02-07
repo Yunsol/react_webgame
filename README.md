@@ -9,7 +9,18 @@ TS는 컴파일러 또는 바벨(Babel)을 통해 자바스크립트 코드로 �
 유효한 자바스크립트로 작성한 코드는 확장자를 .js에서 .ts로 변경하고 타입스크립트로 컴파일해 변환 가능  
 #### es6 <-> typescript 변환: http://www.typescriptlang.org/play/
 
+### TypeScript를 사용하여 .TS 파일을 .JS 파일로 변환하기
+~~~terminal
+Win
+npm install –g typescript //현재 컴퓨터에 설치
+npm install typescript //로컬로 설치(현재 위치의 폴더에 설치)
 
+Mac os
+$ sudo npm install -g typescript //현재 컴퓨터에 설치
+$ sudo npm install typescript //로컬로 설치(현재 위치의 폴더에 설치)
+
+$ tsc HelloWorld.ts
+~~~
 
 ### 비주얼 스튜디오 코드(VSCode)로 자바스크립트 페어링
 MS에서 만든 언어로 VSCODE와 짝짝꿍이 잘 됨  
