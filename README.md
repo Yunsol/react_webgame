@@ -88,6 +88,25 @@ let arr: [string, number] = ['aa', 100];
 ~~~
 
 #### Tuple과 Array 차이
+튜플은 길이와 타입이 고정된 배열  
+~~~javascript
+const user1 = [1, 'setType77@example.com', '1q2w3e4r'];
+const user2 = [2, 'anonymous@example.com', '1q2w3e4rvbf'];
+const user3 = [3, 'imThree@example.com', '1q2w3e4rawrbrf'];
+~~~
+
+~~~typescript
+let user1: [number, string, string];
+user1 = [1, 'setType77@example.com', '1q2w3e4r']; //누군가 튜플의 타입 순서에 맞지 않게 데이터를 넣으려고 하면 에러가 표시
+~~~
+
+~~~typescript
+let user1: [number, string, string];
+user1 = [1, 'setType77@example.com', '1q2w3e4r'];
+
+user1.push('fake'); // 에러없이 컴파일됩니다.
+~~~
+push 메서드를 사용하면 튜플 규칙을 무시하는 문제점이 있지만 배열의 타입 순서와 배열의 길이를 정할 수 있다는 점은 튜플의 유용한 특징
 
 ### Enum
 Number 또는 String 값 집합에 고정된 이름을 부여할 수 있는 타입입니다. 값의 종류가 일정한 범위로 정해져 있는 경우에 유용합니다. 기본적으로 0부터 시작하며 값은 1씩 증가합니다.  
